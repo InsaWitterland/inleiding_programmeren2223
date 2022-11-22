@@ -1,0 +1,45 @@
+querySelector kennisclip. 
+
+Als je console.log('') Dan zie je dit terug in de console in de browser.
+Zo weet je of deze gekoppeld is.
+
+var h1Element = document.querySelector("h1");
+
+!!Hier heb je variabele naam dus h1Element, door daarboven aan te geven at het is
+dan weet het dat het een h1 is.
+
+console.log(h1Element);
+
+!!Hierdoor zie je het terug in de console in de browser.
+
+
+kennisclip variabelen.
+
+De variabele is een soort doosje. Je kan commands er in opslaan.
+Het kan overschreven worden van boven naar beneden. Dus onderste is nieuwe waarde.
+Dus de vraag is de variabele en de input is het antwoord.
+
+Een var moet tussen "" als je tekst hebt
+
+
+Kennisclip IfElse.
+
+Als input ... dan ...
+
+Je maakt 2 variabele voor 2 mogelijkheden.
+
+var toegangLeeftijd = 18;
+var leeftijd = 16; (even zelf ingevuld)
+
+
+> groter dan
+< kleiner dan
+
+if(leeftijd >= toegangsLeeftijd){
+    console.log("welkom");
+} else {
+    console.log("helaas bent je nog niet oud genoeg")
+}
+
+
+
