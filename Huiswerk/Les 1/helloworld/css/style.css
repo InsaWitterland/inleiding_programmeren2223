@@ -1,3 +1,33 @@
 h1 {
     color: blue;
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+body.glitch {
+    font-family: 'Press Start 2P', cursive;
+    background: url("https://media2.giphy.com/media/l0EoAfw1F3yZhTF6M/giphy.gif");
+}
+
+body.glitch * {
+    transform: translate(-50%, -50%);
+    animation-name: spin;
+    animation-duration: 100ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+
+@keyframes spin {
+    0% {
+        transform: scale(0);
+    }
+
+    50% {
+        transform: scale(2);
+    }
+
+    100% {
+        transform: scale(0);
+    }
+}
