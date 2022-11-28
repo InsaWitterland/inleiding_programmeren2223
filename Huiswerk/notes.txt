@@ -1,3 +1,4 @@
+week 1========================================================================================
 querySelector kennisclip. 
 
 Als je console.log('') Dan zie je dit terug in de console in de browser.
@@ -21,6 +22,7 @@ Dus de vraag is de variabele en de input is het antwoord.
 
 Een var moet tussen "" als je tekst hebt
 
+week 2=============================================================
 
 Kennisclip IfElse.
 
@@ -40,6 +42,5 @@ if(leeftijd >= toegangsLeeftijd){
 } else {
     console.log("helaas bent je nog niet oud genoeg")
 }
-
 
 
