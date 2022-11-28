@@ -1,3 +1,51 @@
 h1 {
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: input-serif, serif;
+    font-weight: 800;
+    font-style: normal;
+    margin: 0;
+    color: white;
+}
+
+p {
+    font-family: input-serif, serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+    margin: 0;
+}
+
+section {
+    display: flex;
+    justify-content: space-between;
+    margin: 2em;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#index p {
+    margin: 0.5em;
+}
+
+#index {
+    background-image: url("/game/img/background1.svg");
+    background-repeat: no-repeat;
+    background-size: 80em;
+    width: 80em;
+    margin: 0;
+}
+
+.healthbar {
+    height: 1em;
+    width: 30em;
+    background-color: rgb(90, 138, 90);
+    border-radius: 1em;
+}
+
+img {
+    height: 18em;
+    padding-top: 15em;
 }
