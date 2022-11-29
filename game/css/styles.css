@@ -14,10 +14,14 @@ p {
     margin: 0;
 }
 
-section {
+section:first-of-type {
     display: flex;
     justify-content: space-between;
     margin: 2em;
+}
+
+section:last-of-type {
+    width: 80em;
 }
 
 ul {
@@ -26,11 +30,11 @@ ul {
     margin: 0;
 }
 
-#index p {
+#main p {
     margin: 0.5em;
 }
 
-#index {
+#main {
     background-image: url("/game/img/background1.svg");
     background-repeat: no-repeat;
     background-size: 80em;
@@ -45,7 +49,26 @@ ul {
     border-radius: 1em;
 }
 
+.happinessbar {
+    height: 1em;
+    width: 30em;
+    background-color: rgb(90, 138, 90);
+    border-radius: 1em;
+}
+
+.socialbar {
+    height: 1em;
+    width: 30em;
+    background-color: rgb(90, 138, 90);
+    border-radius: 1em;
+}
+
+
+button {
+    background: transparent;
+    border: 0;
+}
+
 img {
     height: 18em;
-    padding-top: 15em;
 }

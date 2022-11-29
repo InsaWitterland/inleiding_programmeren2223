@@ -44,3 +44,5 @@ if(leeftijd >= toegangsLeeftijd){
 }
 
 
+
+!!in een string om getal niet handmatig aan te passen: (var).length!! staat in les 2 wbhet bier code.
