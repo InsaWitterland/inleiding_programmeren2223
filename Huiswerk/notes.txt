@@ -46,3 +46,43 @@ if(leeftijd >= toegangsLeeftijd){
 
 
 !!in een string om getal niet handmatig aan te passen: (var).length!! staat in les 2 wbhet bier code.
+
+Week 3========================================================================
+
+Kennisclip Functies
+
+ Stap 1: maak een variabele
+ Stap 2: verander content met property.textContent = "blabla";
+
+Om ervoor te zorgen dat de verandering niet meteen gebeurd
+gebruiken wij een Functies
+
+stap 3: zet de verandering van content in de function
+
+function groet(){
+    h1Element.textContent = "blabla"
+}
+
+nu hebben we controle over wanneer dit stukje text wordt uitgevoerd
+later koppelen we dit aan een button (event)
+
+stap 4: groet(); Nu wordt de function geactiveerd
+
+
+===
+Kennisclip EventListeners
+
+Functie wordt pas aangeroepen als er een () achter
+de naam staat
+
+Om function activatie met knop te doen:
+
+stap 1: var buttonElement aanmaken op bijv. img
+
+stap 2: buttonEl.addEventListener("click", groet);
+
+(textcontent om tekst aan te passen)
+(EventListener is om actie reactie uit te voeren)
+(click is een javascript event en moet tussen quote)
+(achter comma zeg je wat moet gebeuren)
+(click, mouseover ... etc)
