@@ -20,20 +20,6 @@ section:first-of-type {
     margin: 2em;
 }
 
-section:nth-of-type(2) {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 8em;
-}
-
-section:nth-of-type(3) {
-    display: flex;
-    justify-content: flex-end;
-    margin-top: 8em;
-}
-
-
-
 ul {
     list-style-type: none;
     padding: 0;
@@ -54,9 +40,25 @@ ul {
 
 .healthbar {
     height: 1em;
-    width: 0em;
-    background-color: rgb(90, 138, 90);
+    width: 30em;
     border-radius: 1em;
+    visibility: hidden;
+}
+
+.healthbar_state1 {
+    width: 5em;
+    background-color: rgb(138, 90, 90);
+    visibility: visible;
+}
+
+.healthbar_state2 {
+    width: 10em;
+    background-color: rgb(138, 132, 90);
+}
+
+.healthbar_state3 {
+    width: 15em;
+    background-color: rgb(90, 138, 90);
 }
 
 .happinessbar {
@@ -64,6 +66,7 @@ ul {
     width: 30em;
     background-color: rgb(90, 138, 90);
     border-radius: 1em;
+    visibility: hidden;
 }
 
 .socialbar {
@@ -71,8 +74,14 @@ ul {
     width: 30em;
     background-color: rgb(90, 138, 90);
     border-radius: 1em;
+    visibility: hidden;
 }
 
+.schaduwbar {
+    background-color: rgb(183, 183, 183);
+    border-radius: 1em;
+    padding: 0.1em;
+}
 
 button {
     background: transparent;
@@ -80,23 +89,51 @@ button {
 }
 
 .mom {
-    width: 15em;
+    width: 20em;
+    position: absolute;
+    top: 15em;
+    left: 1em;
 }
 
 .game {
     width: 10em;
+    position: absolute;
+    top: 26.2em;
+    left: 85em;
 }
 
 .cat {
     width: 10em;
+    position: absolute;
+    top: 46em;
+    left: 40em;
 }
 
 .cookie {
     width: 6em;
+    position: absolute;
+    top: 33.5em;
+    left: 87em;
 }
 
-.background_wrapper {
+.background_wrapper1 {
     background-image: url("/game/img/background2.svg");
+    background-repeat: no-repeat;
+    background-size: 80em;
+    width: 80em;
+    margin: 0;
+}
+
+.background_wrapper2 {
+    background-image: url("/game/img/background3.svg");
+    background-repeat: no-repeat;
+    background-size: 80em;
+    width: 80em;
+    margin: 0;
+}
+
+.background_wrapper3 {
+    background-image: url("/game/img/background4.svg");
     background-repeat: no-repeat;
     background-size: 80em;
     width: 80em;

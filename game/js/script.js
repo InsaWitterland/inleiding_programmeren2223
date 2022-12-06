@@ -8,34 +8,23 @@ var mom = document.querySelector(".mom");
 var cat = document.querySelector(".cat");
 var cookie = document.querySelector(".cookie");
 var game = document.querySelector(".game");
+
+var beginWaarde = 0;
 var body = document.querySelector("body");
 
 function hogeWaarde() {
-    body.classList.toggle("background_wrapper");
+    healthbar.classList.add("healthbar_state1");
 }
 
 mom.addEventListener("click", hogeWaarde, false);
 
-function testbar() {
-    healthbar.style.width = "30em";
+function clickCat() {
+    beginWaarde = 1; 
+    console.log(beginWaarde);
 }
 
-cat.addEventListener("click", testbar, false);
+cat.addEventListener("click", clickCat, false);
 
-/*Hoe selecteer ik mijn background img in de css?
-
-
-Notice that when setting the CSS styles using the style property you have to write the CSS properties in camelcase. 
-Instead of using a dash - to separate the words you will have to write in 
-capitals the first letter of each word. (backgroundColor, fontSize)
-Bron: https://alvarotrigo.com/blog/change-css-javascript/
-https://sebhastian.com/javascript-change-background-image/
-
-
-*/
-/*
-"/game/img/background2.svg"
-"url(/game/img/background2.svg)"
-"url("/game/img/background2.svg")"
-
-*/
+if(beginWaarde>=1){
+    healthbar.classList.add("healthbar_state1");
+}
