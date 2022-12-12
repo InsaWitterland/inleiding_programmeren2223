@@ -1,3 +1,5 @@
+/*General styling=========================================*/
+
 h1 {
     font-family: input-serif, serif;
     font-weight: 800;
@@ -11,7 +13,7 @@ p {
     font-weight: 400;
     font-style: normal;
     color: white;
-    margin: 0;
+    margin: 0.5em;
 }
 
 section:first-of-type {
@@ -26,17 +28,19 @@ ul {
     margin: 0;
 }
 
-.main p {
-    margin: 0.5em;
-}
-
 .main {
     background-image: url("/game/img/background1.svg");
+    background-color: rgb(183, 183, 183);
     background-repeat: no-repeat;
     background-size: 80em;
     width: 80em;
     margin: 0;
 }
+
+/*End of general styling=====================================*/
+
+
+/*Healthbar and styling phases===============================*/
 
 .healthbar {
     height: 1em;
@@ -61,6 +65,8 @@ ul {
     background-color: rgb(90, 138, 90);
 }
 
+/*Happinessbar and styling phases*/
+
 .happinessbar {
     height: 1em;
     width: 30em;
@@ -68,6 +74,8 @@ ul {
     border-radius: 1em;
     visibility: hidden;
 }
+
+/*Socialbar and styling phases*/
 
 .socialbar {
     height: 1em;
@@ -77,12 +85,18 @@ ul {
     visibility: hidden;
 }
 
-.schaduwbar {
+/*General styling indicationbar*/
+
+.schadowbar {
     background-color: rgb(183, 183, 183);
     border-radius: 1em;
     padding: 0.1em;
 }
 
+/*End of indicationbars=======================*/
+
+
+/*The 4 buttons===============================*/
 button {
     background: transparent;
     border: 0;
@@ -116,26 +130,35 @@ button {
     left: 87em;
 }
 
+/*End of the 4 buttons=============================*/
+
+
+
+/*Javascript classlist states======================*/
+
+.gameOver {
+    position: absolute;
+    width: 73em;
+    margin-left: 2em;
+    visibility: hidden;
+}
+
+.visible {
+    visibility: visible;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
 .background_wrapper1 {
     background-image: url("/game/img/background2.svg");
-    background-repeat: no-repeat;
-    background-size: 80em;
-    width: 80em;
-    margin: 0;
 }
 
 .background_wrapper2 {
     background-image: url("/game/img/background3.svg");
-    background-repeat: no-repeat;
-    background-size: 80em;
-    width: 80em;
-    margin: 0;
 }
 
 .background_wrapper3 {
     background-image: url("/game/img/background4.svg");
-    background-repeat: no-repeat;
-    background-size: 80em;
-    width: 80em;
-    margin: 0;
 }

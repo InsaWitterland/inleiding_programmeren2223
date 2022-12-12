@@ -86,3 +86,24 @@ stap 2: buttonEl.addEventListener("click", groet);
 (click is een javascript event en moet tussen quote)
 (achter comma zeg je wat moet gebeuren)
 (click, mouseover ... etc)
+
+
+
+
+Trash code
+
+if (health <= 0 || happiness <= 0 || social <= 0){
+    console.log("gameOver");
+}
+else if(health >= 50 && health < 75 || happiness >= 50 && happiness < 75 || social >=50 && social < 75){
+    console.log("Phase 2");
+}
+else if(health >= 75 && health < 100 || happiness >= 75 && happiness < 100 || social >= 75 && social < 100){
+    console.log("Phase 3");
+}
+else if(health >= 100 && happiness >= 100 && social >= 100){
+    console.log("happy ending, you got up");
+}
+else{
+    console.log("Nothing");
+}
