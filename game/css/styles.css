@@ -49,7 +49,7 @@ img {
 .healthbar {
     height: 1em;
     width: 6em;
-    background-color: rgb(90, 138, 90);
+    background-color: rgb(138, 102, 90);
     border-radius: 1em;
 }
 
@@ -57,20 +57,18 @@ img {
 
 .happinessbar {
     height: 1em;
-    width: 30em;
-    background-color: rgb(90, 138, 90);
+    width: 6em;
+    background-color: rgb(138, 102, 90);
     border-radius: 1em;
-    visibility: hidden;
 }
 
 /*Socialbar and styling phases*/
 
 .socialbar {
     height: 1em;
-    width: 30em;
-    background-color: rgb(90, 138, 90);
+    width: 6em;
+    background-color: rgb(138, 102, 90);
     border-radius: 1em;
-    visibility: hidden;
 }
 
 /*General styling indicationbar*/
@@ -79,6 +77,7 @@ img {
     background-color: rgb(183, 183, 183);
     border-radius: 1em;
     padding: 0.1em;
+    width: 30em;
 }
 
 .state1 {

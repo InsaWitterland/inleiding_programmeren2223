@@ -43,6 +43,7 @@ var social = 20;
 function momClick(){
     health += 10;
     social += 10; 
+    happiness -= 10;
 
     console.log(health, "health");
     console.log(happiness, "happiness");
@@ -179,19 +180,104 @@ else if(health == 20){
 else if(health == 10){
     healthbar.classList.add("state1");
     healthbar.classList.remove("state2");
+    healthbar.classList.remove("hidden");
 }
 else{
-    console.log("nothing at width");
     healthbar.classList.add("hidden");
 }
-   
+
+
+if (happiness >= 100){
+    happinessbar.classList.add("state10");
+}
+else if(happiness == 90){
+    happinessbar.classList.add("state9");
+    happinessbar.classList.remove("state10");
+}
+else if(happiness == 80){
+    happinessbar.classList.add("state8");
+    happinessbar.classList.remove("state9");
+}
+else if(happiness == 70){
+    happinessbar.classList.add("state7");
+    happinessbar.classList.remove("state8");
+}
+else if(happiness == 60){
+    happinessbar.classList.add("state6");
+    happinessbar.classList.remove("state7");
+}
+else if(happiness == 50){
+    happinessbar.classList.add("state5");
+    happinessbar.classList.remove("state6");
+}
+else if(happiness == 40){
+    happinessbar.classList.add("state4");
+    happinessbar.classList.remove("state5");
+}
+else if(happiness == 30){
+    happinessbar.classList.add("state3");
+    happinessbar.classList.remove("state4");
+}
+else if(happiness == 20){
+    happinessbar.classList.add("state2");
+    happinessbar.classList.remove("state3");
+}
+else if(happiness == 10){
+    happinessbar.classList.add("state1");
+    happinessbar.classList.remove("state2");
+    happinessbar.classList.remove("hidden");
+}
+else{
+    happinessbar.classList.add("hidden");
+}
+
+if (social >= 100){
+    socialbar.classList.add("state10");
+}
+else if(social == 90){
+    socialbar.classList.add("state9");
+    socialbar.classList.remove("state10");
+}
+else if(social == 80){
+    socialbar.classList.add("state8");
+    socialbar.classList.remove("state9");
+}
+else if(social == 70){
+    socialbar.classList.add("state7");
+    socialbar.classList.remove("state8");
+}
+else if(social == 60){
+    socialbar.classList.add("state6");
+    socialbar.classList.remove("state7");
+}
+else if(social == 50){
+    socialbar.classList.add("state5");
+    socialbar.classList.remove("state6");
+}
+else if(social == 40){
+    socialbar.classList.add("state4");
+    socialbar.classList.remove("state5");
+}
+else if(social == 30){
+    socialbar.classList.add("state3");
+    socialbar.classList.remove("state4");
+}
+else if(social == 20){
+    socialbar.classList.add("state2");
+    socialbar.classList.remove("state3");
+}
+else if(social == 10){
+    socialbar.classList.add("state1");
+    socialbar.classList.remove("state2");
+    socialbar.classList.remove("hidden");
+}
+else{
+    socialbar.classList.add("hidden");
+}
 }
 
 //=============================================================================
 // NOTES TO SELF!!!
-//Background change
-//    document.body.classList.add("background_wrapper1");
-
-//How do I get the healthbar more precise? Instead of css classes..
+//How do I get the healthbar more goed?
 
 
