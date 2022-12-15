@@ -16,7 +16,7 @@ var section = document.querySelector(".bye");
 var gameOver = document.querySelector(".gameOver");
 
 //Audio ======================================================================+
-var yell = new Audio("../game/audio/yell.mp3");
+var yell = new Audio("/game/audio/yell.mp3");
 var meow = new Audio("../game/audio/meow.mp3");
 var eating = new Audio("../game/audio/eating.mp3");
 var mario = new Audio("../game/audio/mario.mp3");
@@ -26,91 +26,48 @@ var mario = new Audio("../game/audio/mario.mp3");
 //https://youtu.be/uLB1ZeRgl_k Meow Sound Effect
 //============================================================================+
 
+//The 5 button Eventlisteners!!
+mom.addEventListener("click", momClick, false);
+cat.addEventListener("click", catClick, false);
+cookie.addEventListener("click", cookieClick, false);
+game.addEventListener("click", gameClick, false);
+sleep4Ever.addEventListener("click", quit, false);
+
 
 //Start values of actions================================================_
-var health = 25;
-var happiness = 10;
-var social = 10;
-
-//If else explaination of backgroundstages..
-// gameover= ( 0 = x ) 
-// stage 1 (start)= ( 0 < x > 33 )
-// stage 2 = ( 33 <= x > 66 )
-// stage 3 = ( 66 <= x > 100  )
-// Win = ( 100 = x )
+var health = 20;
+var happiness = 20;
+var social = 20;
 
 //The 4 button functions!!
 function momClick(){
-    health += 15;
-    social += 5;
-    happiness -= 5; 
+    health += 10;
+    social += 10; 
 
     console.log(health, "health");
     console.log(happiness, "happiness");
     console.log(social, "social");
 
-    if ((health <= 0) || (happiness <= 0) || (social <= 0)){
-        console.log("gameOver");
-        section.classList.add("hidden");
-        gameOver.classList.add("visible");
-    }
-    else if((health >= 33 && health < 66) && (happiness >= 33 && happiness < 66) && (social >=33 && social < 66)){
-        console.log("Stage 2");
-        yell.play();
-        document.body.classList.add("background_wrapper1");
-    }
-    else if((health >= 66 && health < 100) && (happiness >= 66 && happiness) < 100 && (social >= 66 && social < 100)){
-        console.log("Stage 3");
-        yell.play();
-        document.body.classList.add("background_wrapper2");
-    }
-    else if((health >= 100) && (happiness >= 100) && (social >= 100)){
-        console.log("happy ending, you got up");
-        document.body.classList.add("background_wrapper3");
-        section.classList.add("hidden");
-    }
-    else{
-        console.log("Nothing");
-        yell.play();
-    }
+    yell.play();
+    place();
+    width();
 }
 
 function catClick(){
-    social += 15;
+    social += 10;
     health -= 10;
 
     console.log(health, "health");
     console.log(happiness, "happiness");
     console.log(social, "social");
 
-    if ((health <= 0) || (happiness <= 0) || (social <= 0)){
-        console.log("gameOver");
-        section.classList.add("hidden");
-        gameOver.classList.add("visible");
-    }
-    else if((health >= 33 && health < 66) && (happiness >= 33 && happiness < 66) && (social >=33 && social < 66)){
-        console.log("Stage 2");
-        meow.play();
-        document.body.classList.add("background_wrapper1");
-    }
-    else if((health >= 66 && health < 100) && (happiness >= 66 && happiness) < 100 && (social >= 66 && social < 100)){
-        console.log("Stage 3");
-        meow.play();
-        document.body.classList.add("background_wrapper2");
-    }
-    else if((health >= 100) && (happiness >= 100) && (social >= 100)){
-        console.log("happy ending, you got up");
-        document.body.classList.add("background_wrapper3");
-        section.classList.add("hidden");
-    }
-    else{
-        console.log("Nothing");
-        meow.play();
-    }
+    meow.play();
+    place();
+    width();
 }
 
 function cookieClick(){
-    happiness += 15;
+    happiness += 10;
     health -= 10;
     
 
@@ -118,107 +75,123 @@ function cookieClick(){
     console.log(happiness, "happiness");
     console.log(social, "social");
 
-    if ((health <= 0) || (happiness <= 0) || (social <= 0)){
-        console.log("gameOver");
-        section.classList.add("hidden");
-        gameOver.classList.add("visible");
-    }
-    else if((health >= 33 && health < 66) && (happiness >= 33 && happiness < 66) && (social >=33 && social < 66)){
-        console.log("Stage 2");
-        eating.play();
-        document.body.classList.add("background_wrapper1");
-    }
-    else if((health >= 66 && health < 100) && (happiness >= 66 && happiness) < 100 && (social >= 66 && social < 100)){
-        console.log("Stage 3");
-        eating.play();
-        document.body.classList.add("background_wrapper2");
-    }
-    else if((health >= 100) && (happiness >= 100) && (social >= 100)){
-        console.log("happy ending, you got up");
-        document.body.classList.add("background_wrapper3");
-        section.classList.add("hidden");
-    }
-    else{
-        eating.play();
-        console.log("Nothing");
-    }
+    eating.play();
+    place();
+    width();
 }
 
 function gameClick(){
-    happiness += 15;
-    social -= 5;
+    happiness += 10;
+    social -= 10;
 
     console.log(health, "health");
     console.log(happiness, "happiness");
     console.log(social, "social");
 
+    mario.play();
+    place();
+    width();
+}
+
+function quit(){
+    health -= 10;
+    social -= 10;
+    happiness -= 10;
+
+    console.log(health, "health");
+    console.log(happiness, "happiness");
+    console.log(social, "social");
+    place();
+    width();
+}
+
+//For the backgrounds/ game over~!!`=======================================
+//If else explaination of backgroundstages..
+// There are a total of 4 backgrounds, so 3 changes. The total score is 100-ish. So 1/3 33% change per thingy
+// gameover= ( 0 = x ) 
+// stage 1 (start)= ( 0 < x > 33 )
+// stage 2 = ( 33 <= x > 66 )
+// stage 3 = ( 66 <= x > 100  )
+// Win = ( 100 = x )
+function place() {
     if ((health <= 0) || (happiness <= 0) || (social <= 0)){
         console.log("gameOver");
         section.classList.add("hidden");
         gameOver.classList.add("visible");
-    }
-    else if((health >= 33 && health < 66) && (happiness >= 33 && happiness < 66) && (social >=33 && social < 66)){
-        console.log("Stage 2");
-        mario.play();
-        document.body.classList.add("background_wrapper1");
-    }
-    else if((health >= 66 && health < 100) && (happiness >= 66 && happiness) < 100 && (social >= 66 && social < 100)){
-        console.log("Stage 3");
-        mario.play();
-        document.body.classList.add("background_wrapper2");
     }
     else if((health >= 100) && (happiness >= 100) && (social >= 100)){
         console.log("happy ending, you got up");
         document.body.classList.add("background_wrapper3");
         section.classList.add("hidden");
     }
+    else if((health >= 66) && (happiness >= 66 ) && (social >= 66)){
+        console.log("Stage 3");
+        document.body.classList.remove("background_wrapper3");
+        document.body.classList.add("background_wrapper2");
+    }
+    else if((health >= 33) && (happiness >= 33) && (social >=33)){
+        console.log("Stage 2");
+        document.body.classList.remove("background_wrapper2");
+        document.body.classList.add("background_wrapper1");
+    }
     else{
-        console.log("Nothing");
-        mario.play();
+        console.log("Stage 1");
+        document.body.classList.remove("background_wrapper1", "background_wrapper2", "background_wrapper3");
     }
 }
 
-
-
-//The 4 button Eventlisteners!!
-mom.addEventListener("click", momClick, false);
-cat.addEventListener("click", catClick, false);
-cookie.addEventListener("click", cookieClick, false);
-game.addEventListener("click", gameClick, false);
-
-
-
-//Small test on conditions Sleep4Ever===================================================
-function quit(){
-    health -= 10;
-    social -= 10;
-    happiness -= 10;
-
-    if ((health <= 0) || (happiness <= 0) || (social <= 0)){
-        console.log("gameOver");
-        section.classList.add("hidden");
-        gameOver.classList.add("visible");
-    }
-    else{
-        console.log("Nothing");
-    }
-    console.log(health, "healthpoints");
-    console.log(social, "social points");
-    console.log(happiness, "happiness points");
-
+function width() {
+   if (health >= 100){
+    healthbar.classList.add("state10");
 }
-sleep4Ever.addEventListener("click", quit, false);
+else if(health == 90){
+    healthbar.classList.add("state9");
+    healthbar.classList.remove("state10");
+}
+else if(health == 80){
+    healthbar.classList.add("state8");
+    healthbar.classList.remove("state9");
+}
+else if(health == 70){
+    healthbar.classList.add("state7");
+    healthbar.classList.remove("state8");
+}
+else if(health == 60){
+    healthbar.classList.add("state6");
+    healthbar.classList.remove("state7");
+}
+else if(health == 50){
+    healthbar.classList.add("state5");
+    healthbar.classList.remove("state6");
+}
+else if(health == 40){
+    healthbar.classList.add("state4");
+    healthbar.classList.remove("state5");
+}
+else if(health == 30){
+    healthbar.classList.add("state3");
+    healthbar.classList.remove("state4");
+}
+else if(health == 20){
+    healthbar.classList.add("state2");
+    healthbar.classList.remove("state3");
+}
+else if(health == 10){
+    healthbar.classList.add("state1");
+    healthbar.classList.remove("state2");
+}
+else{
+    console.log("nothing at width");
+    healthbar.classList.add("hidden");
+}
+   
+}
 
 //=============================================================================
 // NOTES TO SELF!!!
 //Background change
 //    document.body.classList.add("background_wrapper1");
 
-//Where do I put the if else if I want it continually checking the states? So not in the function?
 //How do I get the healthbar more precise? Instead of css classes..
-//audio error?
-//Why is the bg switching to stage 1?
-
-
 
 

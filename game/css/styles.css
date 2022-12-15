@@ -28,6 +28,10 @@ ul {
     margin: 0;
 }
 
+img {
+    pointer-events: none;
+}
+
 .main {
     background-image: url("/game/img/background1.svg");
     background-color: rgb(183, 183, 183);
@@ -35,34 +39,18 @@ ul {
     background-size: 80em;
     width: 80em;
     margin: 0;
+    user-select: none;
 }
 
 /*End of general styling=====================================*/
 
 
 /*Healthbar and styling phases===============================*/
-
 .healthbar {
     height: 1em;
-    width: 30em;
-    border-radius: 1em;
-    visibility: hidden;
-}
-
-.healthbar_state1 {
-    width: 5em;
-    background-color: rgb(138, 90, 90);
-    visibility: visible;
-}
-
-.healthbar_state2 {
-    width: 10em;
-    background-color: rgb(138, 132, 90);
-}
-
-.healthbar_state3 {
-    width: 15em;
+    width: 6em;
     background-color: rgb(90, 138, 90);
+    border-radius: 1em;
 }
 
 /*Happinessbar and styling phases*/
@@ -93,6 +81,66 @@ ul {
     padding: 0.1em;
 }
 
+.state1 {
+    width: 3em;
+    background-color: rgb(138, 90, 90);
+    transition-duration: 0.2s;
+}
+
+.state2 {
+    width: 6em;
+    background-color: rgb(138, 102, 90);
+    transition-duration: 0.2s;
+}
+
+.state3 {
+    width: 9em;
+    background-color: rgb(138, 117, 90);
+    transition-duration: 0.2s;
+}
+
+.state4 {
+    width: 12em;
+    background-color: rgb(138, 128, 90);
+    transition-duration: 0.2s;
+}
+
+.state5 {
+    width: 15em;
+    background-color: rgb(138, 132, 90);
+    transition-duration: 0.2s;
+}
+
+.state6 {
+    width: 18em;
+    background-color: rgb(124, 138, 90);
+    transition-duration: 0.2s;
+}
+
+.state7 {
+    width: 21em;
+    background-color: rgb(112, 138, 90);
+    transition-duration: 0.2s;
+}
+
+.state8 {
+    width: 24em;
+    background-color: rgb(103, 138, 90);
+    transition-duration: 0.2s;
+}
+
+.state9 {
+    width: 27em;
+    background-color: rgb(90, 138, 90);
+    transition-duration: 0.2s;
+}
+
+.state10 {
+    width: 30em;
+    background-color: rgb(90, 138, 90);
+    transition-duration: 0.2s;
+}
+
 /*End of indicationbars=======================*/
 
 
@@ -100,6 +148,12 @@ ul {
 button {
     background: transparent;
     border: 0;
+    cursor: pointer;
+    transition-duration: 0.2s;
+}
+
+button:hover {
+    transform: rotate(5deg);
 }
 
 .mom {
@@ -145,6 +199,19 @@ button {
 
 .visible {
     visibility: visible;
+    animation: fadeIn 1s;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: rotate(0deg);
+    }
+
+    100% {
+        opacity: 1;
+        transform: rotate(360deg);
+    }
 }
 
 .hidden {
