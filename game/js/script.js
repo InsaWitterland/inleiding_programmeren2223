@@ -20,10 +20,12 @@ var yell = new Audio("/game/audio/yell.mp3");
 var meow = new Audio("../game/audio/meow.mp3");
 var eating = new Audio("../game/audio/eating.mp3");
 var mario = new Audio("../game/audio/mario.mp3");
+var pixelSound = new Audio("../game/audio/gameOver.mp3");
 //https://youtu.be/Fiaf796kieI Minecraft eating sound effect
 //https://youtu.be/6G-k4zxou7Y Super Mario Bros. - Mushroom Sound Effect
 //https://youtu.be/OVchVwc68qs Mom Sound Effect
 //https://youtu.be/uLB1ZeRgl_k Meow Sound Effect
+//https://youtu.be/NN_8vfN0HP4 Game over Sound Effect
 //============================================================================+
 
 //The 5 button Eventlisteners!!
@@ -119,6 +121,7 @@ function place() {
         console.log("gameOver");
         section.classList.add("hidden");
         gameOver.classList.add("visible");
+        pixelSound.play();
     }
     else if((health >= 100) && (happiness >= 100) && (social >= 100)){
         console.log("happy ending, you got up");
