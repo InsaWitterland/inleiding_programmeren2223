@@ -11,7 +11,7 @@ var game = document.querySelector(".game");
 var sleep4Ever = document.querySelector("h1");
 
 //Selected in var for CSS changes
-var body = document.querySelector(".main");
+var main = document.querySelector(".main");
 var section = document.querySelector(".bye");
 var gameOver = document.querySelector(".gameOver");
 
@@ -125,22 +125,22 @@ function place() {
     }
     else if((health >= 100) && (happiness >= 100) && (social >= 100)){
         console.log("happy ending, you got up");
-        document.body.classList.add("background_wrapper3");
+        main.classList.add("background_wrapper3");
         section.classList.add("hidden");
     }
     else if((health >= 66) && (happiness >= 66 ) && (social >= 66)){
         console.log("Stage 3");
-        document.body.classList.remove("background_wrapper3");
-        document.body.classList.add("background_wrapper2");
+        main.classList.remove("background_wrapper3");
+        main.classList.add("background_wrapper2");
     }
     else if((health >= 33) && (happiness >= 33) && (social >=33)){
         console.log("Stage 2");
-        document.body.classList.remove("background_wrapper2");
-        document.body.classList.add("background_wrapper1");
+        main.classList.remove("background_wrapper2");
+        main.classList.add("background_wrapper1");
     }
     else{
         console.log("Stage 1");
-        document.body.classList.remove("background_wrapper1", "background_wrapper2", "background_wrapper3");
+        main.classList.remove("background_wrapper1", "background_wrapper2", "background_wrapper3");
     }
 }
 
