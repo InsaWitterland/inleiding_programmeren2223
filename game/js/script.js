@@ -16,11 +16,11 @@ var section = document.querySelector(".bye");
 var gameOver = document.querySelector(".gameOver");
 
 //Audio ======================================================================+
-var yell = new Audio("/game/audio/yell.mp3");
-var meow = new Audio("../game/audio/meow.mp3");
-var eating = new Audio("../game/audio/eating.mp3");
-var mario = new Audio("../game/audio/mario.mp3");
-var pixelSound = new Audio("../game/audio/gameOver.mp3");
+var yell = new Audio("audio/yell.mp3");
+var meow = new Audio("audio/meow.mp3");
+var eating = new Audio("audio/eating.mp3");
+var mario = new Audio("audio/mario.mp3");
+var pixelSound = new Audio("audio/gameOver.mp3");
 //https://youtu.be/Fiaf796kieI Minecraft eating sound effect
 //https://youtu.be/6G-k4zxou7Y Super Mario Bros. - Mushroom Sound Effect
 //https://youtu.be/OVchVwc68qs Mom Sound Effect
