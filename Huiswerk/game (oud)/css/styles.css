@@ -45,44 +45,103 @@ img {
 /*End of general styling=====================================*/
 
 
-/*https://www.w3docs.com/learn-html/html-meter-tag.html pseudoclass for styling!!===============================*/
-meter {
-    height: 1.5em;
-    width: 30em;
+/*Healthbar and styling phases===============================*/
+.healthbar {
+    height: 1em;
+    width: 6em;
+    background-color: rgb(138, 102, 90);
     border-radius: 1em;
 }
 
-meter::-webkit-meter-optimum-value {
-    background-color: rgb(66, 128, 66);
-    transition: width .5s;
+/*Happinessbar and styling phases*/
+
+.happinessbar {
+    height: 1em;
+    width: 6em;
+    background-color: rgb(138, 102, 90);
+    border-radius: 1em;
 }
 
-meter::-webkit-meter-suboptimum-value {
-    background-color: rgb(128, 127, 66);
-    transition: width .5s;
+/*Socialbar and styling phases*/
+
+.socialbar {
+    height: 1em;
+    width: 6em;
+    background-color: rgb(138, 102, 90);
+    border-radius: 1em;
 }
 
-meter::-webkit-meter-even-less-good-value {
-    background-color: rgb(128, 66, 66);
-    transition: width .5s;
+/*General styling indicationbar*/
+
+.schadowbar {
+    background-color: rgb(183, 183, 183);
+    border-radius: 1em;
+    padding: 0.1em;
+    width: 30em;
 }
 
-/*meter:-webkit-meter-optimum-value {
-    box-shadow: 0 5px 5px -5px #333 inset;
-    background-image: linear-gradient (90deg,
-            #934a4a 10%,
-            #93524a 20%,
-            #936c4a 30%,
-            #937b4a 40%,
-            #938c4a 50%,
-            #8a934a 60%,
-            #7c934a 70%,
-            #66934a 80%,
-            #55934a 90%,
-            #4a934f 100%,
-        );
-    background-size: 100% 100%;
-}*/
+.state1 {
+    width: 3em;
+    background-color: rgb(138, 90, 90);
+    transition-duration: 0.2s;
+}
+
+.state2 {
+    width: 6em;
+    background-color: rgb(138, 102, 90);
+    transition-duration: 0.2s;
+}
+
+.state3 {
+    width: 9em;
+    background-color: rgb(138, 117, 90);
+    transition-duration: 0.2s;
+}
+
+.state4 {
+    width: 12em;
+    background-color: rgb(138, 128, 90);
+    transition-duration: 0.2s;
+}
+
+.state5 {
+    width: 15em;
+    background-color: rgb(138, 132, 90);
+    transition-duration: 0.2s;
+}
+
+.state6 {
+    width: 18em;
+    background-color: rgb(124, 138, 90);
+    transition-duration: 0.2s;
+}
+
+.state7 {
+    width: 21em;
+    background-color: rgb(112, 138, 90);
+    transition-duration: 0.2s;
+}
+
+.state8 {
+    width: 24em;
+    background-color: rgb(103, 138, 90);
+    transition-duration: 0.2s;
+}
+
+.state9 {
+    width: 27em;
+    background-color: rgb(90, 138, 90);
+    transition-duration: 0.2s;
+}
+
+.state10 {
+    width: 30em;
+    background-color: rgb(90, 138, 90);
+    transition-duration: 0.2s;
+}
+
+/*End of indicationbars=======================*/
+
 
 /*The 4 buttons===============================*/
 button {
